@@ -38,7 +38,7 @@ const Navbar = () => {
             <div className="relative">
               <input
                 type="text"
-                style={{ paddingLeft: "10px", backgroundColor: "#F5F5F5" }}
+                style={{ paddingLeft: "14px", backgroundColor: "#F5F5F5" }}
                 placeholder="What are you looking for?"
                 value={isSearchChange}
                 onChange={(e) => setSearchChange(e.target.value)}
