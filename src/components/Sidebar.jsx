@@ -23,10 +23,9 @@ const Sidebar = () => {
 
   return (
     <div className="flex h-screen overflow-hidden">
-      {/* Sidebar */}
-      <aside className="bg-white w-64 overflow-y-auto hidden lg:block">
+      <aside className="bg-white w-64 overflow-y-auto hidden lg:block ml-28">
         <nav className="py-4">
-          <ul className="space-y-2">
+          <ul className="space-y-0">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <a
@@ -43,11 +42,7 @@ const Sidebar = () => {
           </ul>
         </nav>
       </aside>
-
-      {/* Divider */}
       <div className="w-px bg-gray-300 hidden lg:block"></div>
-
-      {/* Swiper Content */}
       <div className="flex-1 overflow-y-auto">
         <Swiper
           modules={[Pagination]}
