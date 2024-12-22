@@ -1,12 +1,12 @@
 import { ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import IphoneBanner1 from "../assets/iphone-16-family.jpg";
 import IphoneBanner2 from "../assets/iphone16-banner.webp";
 import IphoneBanner3 from "../assets/Pre-register-banner.webp";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Sidebar = () => {
   const menuItems = [
