@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Sidebar = () => {
+const Hero = () => {
   const menuItems = [
     { name: "Woman's Fashion", hasArrow: true },
     { name: "Men's Fashion", hasArrow: true },
@@ -22,10 +22,10 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex overflow-hidden">
       <aside className="bg-white w-64 overflow-y-auto hidden lg:block ml-28">
         <nav className="py-4">
-          <ul className="space-y-0">
+          <ul className="space-y-1.5">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <a
@@ -42,7 +42,7 @@ const Sidebar = () => {
           </ul>
         </nav>
       </aside>
-      <div className="w-px bg-gray-300 hidden lg:block"></div>
+      <div className="w-px h-96 bg-gray-300 hidden lg:block"></div>
       <div className="flex-1 overflow-y-auto">
         <Swiper
           modules={[Pagination]}
@@ -86,4 +86,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Hero;
