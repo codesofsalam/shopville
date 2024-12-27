@@ -1,7 +1,5 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
-
-// Import images
 import ShoppingBanner1 from "../assets/shopping.jpg";
 import ShoppingBanner2 from "../assets/shopping2.jpg";
 import ShoppingBanner3 from "../assets/shopping3.jpg";
@@ -28,17 +26,17 @@ const Hero = () => {
     {
       id: 1,
       alt: "iPhone Banner 1",
-      imageUrl: ShoppingBanner1, // Using imported image
+      imageUrl: ShoppingBanner1,
     },
     {
       id: 2,
       alt: "iPhone Banner 2",
-      imageUrl: ShoppingBanner2, // Using imported image
+      imageUrl: ShoppingBanner2,
     },
     {
       id: 3,
       alt: "iPhone Banner 3",
-      imageUrl: ShoppingBanner3, // Using imported image
+      imageUrl: ShoppingBanner3,
     },
   ];
 
@@ -49,11 +47,12 @@ const Hero = () => {
   React.useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="flex flex-col lg:flex-row overflow-hidden bg-gray-50">
-      <aside className="bg-white w-full lg:w-64 overflow-y-auto lg:block lg:ml-14 border-b lg:border-b-0 shadow-sm">
+      <aside className="bg-white w-full lg:w-64 overflow-y-auto lg:block lg:ml-12 border-b lg:border-b-0 shadow-sm">
         <nav className="py-2 lg:py-4">
           <h2 className="px-3 lg:px-6 text-lg font-semibold text-gray-800 mb-2 hidden lg:block">
             Categories
@@ -88,7 +87,7 @@ const Hero = () => {
               <div key={slide.id} className="min-w-full">
                 <div className="flex justify-center bg-white">
                   <img
-                    src={slide.imageUrl} // Using the imported image path
+                    src={slide.imageUrl}
                     alt={slide.alt}
                     className="h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] w-full object-cover hover:scale-105 transition-transform duration-500"
                   />
@@ -101,7 +100,9 @@ const Hero = () => {
             {slides.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-colors duration-300 ${currentSlide === index ? "bg-blue-600" : "bg-gray-300"}`}
+                className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                  currentSlide === index ? "bg-blue-600" : "bg-gray-300"
+                }`}
                 onClick={() => setCurrentSlide(index)}
               />
             ))}

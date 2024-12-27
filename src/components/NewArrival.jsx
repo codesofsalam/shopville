@@ -1,8 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const FeaturedCard = ({ title, description, image, size = 'small' }) => (
-  <div className={`relative rounded-xl overflow-hidden group ${size === 'large' ? 'row-span-2 lg:h-[600px]' : 'h-[290px]'}`}>
+const FeaturedCard = ({ title, description, image, size = "small" }) => (
+  <div
+    className={`relative rounded-xl overflow-hidden group ${
+      size === "large" ? "row-span-2 lg:h-[600px]" : "h-[290px]"
+    }`}
+  >
     <img
       src={image}
       alt={title}
@@ -22,7 +25,7 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['small', 'large']),
+  size: PropTypes.oneOf(["small", "large"]),
 };
 
 const NewArrival = () => {

@@ -17,28 +17,41 @@ const Navbar = () => {
             <div className="flex items-center justify-between">
               {/* Logo */}
               <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity">
-                  SparkBuy
+                <a
+                  href="/"
+                  className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity"
+                >
+                  ShopVille
                 </a>
               </div>
 
-              {/* Desktop Navigation */}
               <div className="hidden md:flex items-center justify-center flex-grow space-x-8">
-                <a href="#home" className="text-gray-800 hover:text-blue-600 font-medium py-2 border-b-2 border-blue-600 transition-colors">
+                <a
+                  href="#home"
+                  className="text-gray-800 hover:text-blue-600 font-medium py-2 border-b-2 border-blue-600 transition-colors"
+                >
                   Home
                 </a>
-                <a href="#about" className="text-gray-600 hover:text-blue-600 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all">
+                <a
+                  href="#about"
+                  className="text-gray-600 hover:text-blue-600 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all"
+                >
                   About
                 </a>
-                <a href="#contact" className="text-gray-600 hover:text-blue-600 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all">
+                <a
+                  href="#contact"
+                  className="text-gray-600 hover:text-blue-600 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all"
+                >
                   Contact
                 </a>
-                <a href="#signup" className="text-gray-600 hover:text-blue-600 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all">
+                <a
+                  href="#signup"
+                  className="text-gray-600 hover:text-blue-600 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all"
+                >
                   Sign Up
                 </a>
               </div>
 
-              {/* Desktop Search and Icons */}
               <div className="hidden md:flex items-center space-x-6">
                 <div className="relative">
                   <input
@@ -67,8 +80,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Mobile Menu Button */}
-              <button 
+              <button
                 className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
                 onClick={ToggleMenuBtn}
               >
@@ -76,19 +88,34 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* Mobile Menu */}
-            <div className={`md:hidden mt-4 transition-all duration-300 ease-in-out ${isMobMenuOpen ? 'opacity-100' : 'opacity-0 hidden'}`}>
+            <div
+              className={`md:hidden mt-4 transition-all duration-300 ease-in-out ${
+                isMobMenuOpen ? "opacity-100" : "opacity-0 hidden"
+              }`}
+            >
               <div className="space-y-2 pb-4">
-                <a href="#home" className="block px-4 py-2 text-gray-800 hover:bg-gray-50 rounded-lg font-medium transition-colors">
+                <a
+                  href="#home"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+                >
                   Home
                 </a>
-                <a href="#about" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">
+                <a
+                  href="#about"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+                >
                   About
                 </a>
-                <a href="#contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">
+                <a
+                  href="#contact"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+                >
                   Contact
                 </a>
-                <a href="#signup" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">
+                <a
+                  href="#signup"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+                >
                   Sign Up
                 </a>
               </div>

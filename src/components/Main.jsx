@@ -63,7 +63,6 @@ const products = [
 const ProductCard = ({ product }) => (
   <div className="group">
     <div className="relative bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
-      {/* Ensure this container is relative */}
       <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 text-sm font-medium rounded-full z-10">
         -{product.discount}%
       </div>
@@ -75,7 +74,7 @@ const ProductCard = ({ product }) => (
           <Eye className="w-5 h-5" />
         </button>
       </div>
-      {/* Add relative class to image wrapper */}
+
       <div className="mb-4 relative group-hover:scale-105 transition-transform duration-300">
         <img
           src={product.image}
@@ -86,7 +85,9 @@ const ProductCard = ({ product }) => (
       <div className="space-y-3">
         <h3 className="font-semibold text-gray-800 text-lg">{product.name}</h3>
         <div className="flex items-center gap-3">
-          <span className="text-red-500 font-bold text-lg">${product.price}</span>
+          <span className="text-red-500 font-bold text-lg">
+            ${product.price}
+          </span>
           <span className="text-gray-400 line-through text-sm">
             ${product.originalPrice}
           </span>
@@ -102,7 +103,6 @@ const ProductCard = ({ product }) => (
     </div>
   </div>
 );
-
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
@@ -120,7 +120,9 @@ ProductCard.propTypes = {
 const TimeUnit = ({ value, label }) => (
   <div className="text-center">
     <div className="bg-gray-900 text-white rounded-xl px-4 py-2 min-w-[70px]">
-      <span className="text-2xl font-bold">{value < 10 ? `0${value}` : value}</span>
+      <span className="text-2xl font-bold">
+        {value < 10 ? `0${value}` : value}
+      </span>
     </div>
     <span className="text-sm text-gray-600 mt-1 block">{label}</span>
   </div>

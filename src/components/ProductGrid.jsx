@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import { Star, Heart, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
+import PropTypes from "prop-types";
+import { Star, Heart, Eye, ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProductCard = ({ product }) => (
   <div className="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
@@ -30,15 +30,19 @@ const ProductCard = ({ product }) => (
           {product.name}
         </h3>
         <div className="flex items-center justify-between">
-          <span className="text-red-500 font-bold text-lg">${product.price}</span>
+          <span className="text-red-500 font-bold text-lg">
+            ${product.price}
+          </span>
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
-              <Star 
-                key={i} 
+              <Star
+                key={i}
                 className="w-4 h-4 fill-yellow-400 text-yellow-400"
               />
             ))}
-            <span className="text-gray-400 text-sm ml-1">({product.reviews})</span>
+            <span className="text-gray-400 text-sm ml-1">
+              ({product.reviews})
+            </span>
           </div>
         </div>
         {product.colors && (
@@ -70,14 +74,61 @@ ProductCard.propTypes = {
 
 const ProductGrid = () => {
   const products = [
-    { name: "Breed Dry Dog Food", price: 100, reviews: 35, image: "/breeddog.png" },
-    { name: "CANON EOS DSLR Camera", price: 360, reviews: 95, addToCart: true, image: "/dslr.png" },
-    { name: "ASUS FHD Gaming Laptop", price: 700, reviews: 325, image: "/laptop.jpeg" },
-    { name: "Curology Product Set", price: 500, reviews: 145, image: "/curology.jpeg" },
-    { name: "Kids Electric Car", price: 960, reviews: 65, new: true, colors: ['red', 'gray'], image: "/car.png" },
-    { name: "Jr. Zoom Soccer Cleats", price: 1160, reviews: 35, colors: ['yellow', 'black'], image: "/shoes.jpeg" },
-    { name: "GP11 Shooter USB Gamepad", price: 660, reviews: 55, new: true, colors: ['red', 'black'], image: "/gamepad.jpeg" },
-    { name: "Quilted Satin Jacket", price: 660, reviews: 55, colors: ['green', 'red'], image: "/satinjacket.png" }
+    {
+      name: "Breed Dry Dog Food",
+      price: 100,
+      reviews: 35,
+      image: "/breeddog.png",
+    },
+    {
+      name: "CANON EOS DSLR Camera",
+      price: 360,
+      reviews: 95,
+      addToCart: true,
+      image: "/dslr.png",
+    },
+    {
+      name: "ASUS FHD Gaming Laptop",
+      price: 700,
+      reviews: 325,
+      image: "/laptop.jpeg",
+    },
+    {
+      name: "Curology Product Set",
+      price: 500,
+      reviews: 145,
+      image: "/curology.jpeg",
+    },
+    {
+      name: "Kids Electric Car",
+      price: 960,
+      reviews: 65,
+      new: true,
+      colors: ["red", "gray"],
+      image: "/car.png",
+    },
+    {
+      name: "Jr. Zoom Soccer Cleats",
+      price: 1160,
+      reviews: 35,
+      colors: ["yellow", "black"],
+      image: "/shoes.jpeg",
+    },
+    {
+      name: "GP11 Shooter USB Gamepad",
+      price: 660,
+      reviews: 55,
+      new: true,
+      colors: ["red", "black"],
+      image: "/gamepad.jpeg",
+    },
+    {
+      name: "Quilted Satin Jacket",
+      price: 660,
+      reviews: 55,
+      colors: ["green", "red"],
+      image: "/satinjacket.png",
+    },
   ];
 
   return (
@@ -85,14 +136,22 @@ const ProductGrid = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div className="space-y-2">
           <p className="text-red-500 font-medium">Our Products</p>
-          <h2 className="text-3xl font-bold text-gray-900">Explore Our Products</h2>
+          <h2 className="text-3xl font-bold text-gray-900">
+            Explore Our Products
+          </h2>
         </div>
         <div className="flex gap-3">
           <button className="p-3 rounded-full hover:bg-gray-100 border border-gray-200 transition-colors group">
-            <ChevronLeft size={20} className="text-gray-600 group-hover:text-gray-900" />
+            <ChevronLeft
+              size={20}
+              className="text-gray-600 group-hover:text-gray-900"
+            />
           </button>
           <button className="p-3 rounded-full hover:bg-gray-100 border border-gray-200 transition-colors group">
-            <ChevronRight size={20} className="text-gray-600 group-hover:text-gray-900" />
+            <ChevronRight
+              size={20}
+              className="text-gray-600 group-hover:text-gray-900"
+            />
           </button>
         </div>
       </div>
