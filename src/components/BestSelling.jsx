@@ -56,18 +56,18 @@ ProductCard.propTypes = {
 const BestSelling = () => {
     const products = [
       {
-        name: 'The north coat',
+        name: 'Space Tee',
         salePrice: 260,
         originalPrice: 350,
         reviews: 65,
-        imageUrl: '/northcoat.png',
+        imageUrl: '/tee.jpeg',
       },
       {
         name: 'Gucci duffle bag',
         salePrice: 960,
         originalPrice: 1160,
         reviews: 65,
-        imageUrl: '/guccibag.png',
+        imageUrl: '/guccibag.jpeg',
       },
       {
         name: 'RGB liquid CPU Cooler',
@@ -81,7 +81,7 @@ const BestSelling = () => {
         salePrice: 360,
         originalPrice: 0,
         reviews: 65,
-        imageUrl: '/bookshelf.png',
+        imageUrl: '/bookshelf.jpeg',
       },
     ];
   

@@ -72,17 +72,17 @@ const ProductGrid = () => {
   const products = [
     { name: "Breed Dry Dog Food", price: 100, reviews: 35, image: "/breeddog.png" },
     { name: "CANON EOS DSLR Camera", price: 360, reviews: 95, addToCart: true, image: "/dslr.png" },
-    { name: "ASUS FHD Gaming Laptop", price: 700, reviews: 325, image: "/laptop.png" },
-    { name: "Curology Product Set", price: 500, reviews: 145, image: "/product.png" },
+    { name: "ASUS FHD Gaming Laptop", price: 700, reviews: 325, image: "/laptop.jpeg" },
+    { name: "Curology Product Set", price: 500, reviews: 145, image: "/curology.jpeg" },
     { name: "Kids Electric Car", price: 960, reviews: 65, new: true, colors: ['red', 'gray'], image: "/car.png" },
-    { name: "Jr. Zoom Soccer Cleats", price: 1160, reviews: 35, colors: ['yellow', 'black'], image: "/shoes.png" },
-    { name: "GP11 Shooter USB Gamepad", price: 660, reviews: 55, new: true, colors: ['red', 'black'], image: "/gamepad.png" },
+    { name: "Jr. Zoom Soccer Cleats", price: 1160, reviews: 35, colors: ['yellow', 'black'], image: "/shoes.jpeg" },
+    { name: "GP11 Shooter USB Gamepad", price: 660, reviews: 55, new: true, colors: ['red', 'black'], image: "/gamepad.jpeg" },
     { name: "Quilted Satin Jacket", price: 660, reviews: 55, colors: ['green', 'red'], image: "/satinjacket.png" }
   ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-12">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div className="space-y-2">
           <p className="text-red-500 font-medium">Our Products</p>
           <h2 className="text-3xl font-bold text-gray-900">Explore Our Products</h2>
