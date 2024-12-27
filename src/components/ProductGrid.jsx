@@ -1,4 +1,4 @@
-import React from 'react';
+
 import PropTypes from 'prop-types';
 import { Star, Heart, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 
