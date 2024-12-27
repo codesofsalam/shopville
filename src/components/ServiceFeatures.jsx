@@ -40,7 +40,7 @@ const ServiceFeatures = () => {
   ];
 
   return (
-    <div className="mx-auto p-8 ml-24">
+    <div className="mx-auto p-8 md:px-24 ml-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />

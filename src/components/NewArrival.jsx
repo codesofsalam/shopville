@@ -27,7 +27,7 @@ FeaturedCard.propTypes = {
 
 const NewArrival = () => {
   return (
-    <div className="mx-auto p-8 ml-24">
+    <div className="mx-auto p-8 md:px-24 ml-10">
       <div className="mb-6">
         <div className="text-red-500 text-sm mb-1">Featured</div>
         <h2 className="text-xl font-bold">New Arrival</h2>

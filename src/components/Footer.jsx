@@ -1,9 +1,8 @@
-
 import { Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => (
-  <footer className="bg-black text-white px-4 py-12">
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+  <footer className="bg-black text-white px-4 py-8">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
       {/* Exclusive Section */}
       <div>
         <h3 className="text-lg font-bold mb-4">Exclusive</h3>
@@ -55,16 +54,17 @@ const Footer = () => (
         </nav>
       </div>
 
+      {/* Download App Section */}
       <div>
         <h3 className="text-lg font-bold mb-4">Download App</h3>
         <p className="text-sm mb-4">Save $3 with App New User Only</p>
-        <div className="grid grid-cols-2 gap-2 mb-4">
+        
+          <div className="flex gap-4">
           <img
-            src="/qrcode.png"
-            alt="QR Code"
-            className="w-15 h-15"
-          />
-          <div className="flex flex-col gap-4">
+              src="/qrcode.png"
+              alt="Google Play"
+              className="w-10 h-10"
+            />
             <img
               src="/googleplay.png"
               alt="Google Play"
@@ -84,6 +84,10 @@ const Footer = () => (
           <Linkedin size={24} />
         </div>
       </div>
+    
+
+    <div className="mt-12 text-center text-sm text-gray-400">
+      <p>&copy; {new Date().getFullYear()} Abdul Salam @Ecommerce. All rights reserved.</p>
     </div>
   </footer>
 );

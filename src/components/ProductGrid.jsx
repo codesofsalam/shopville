@@ -1,49 +1,57 @@
-
 import PropTypes from 'prop-types';
 import { Star, Heart, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ProductCard = ({ product }) => (
-  <div className="bg-gray-50 rounded-lg">
-   <div className="relative p-4">
-  <img 
-    src={product.image} 
-    alt={product.name}
-    className="w-full h-48 object-cover rounded-lg mb-4"
-  />
-  {product.new && (
-    <span className="absolute top-6 left-6 bg-green-400 text-white text-xs px-2 py-1 rounded">
-      NEW
-    </span>
-  )}
-  <div className="absolute top-2 right-2 flex flex-col gap-2">
-    <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100">
-      <Heart className="w-5 h-5" />
-    </button>
-    <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100">
-      <Eye className="w-5 h-5" />
-    </button>
-  </div>
-</div>
-
-    
-    <div className="p-4">
-      <h3 className="text-sm font-medium mb-2">{product.name}</h3>
-      <div className="flex items-center gap-2 mb-2">
-        <span className="text-red-500">${product.price}</span>
-      </div>
-      <div className="flex items-center gap-1 mb-2">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-        ))}
-        <span className="text-gray-400 text-sm">({product.reviews})</span>
-      </div>
-      {product.colors && (
-        <div className="flex gap-2">
-          {product.colors.map((color, i) => (
-            <div key={i} className={`w-4 h-4 rounded-full border bg-${color}-500`} />
-          ))}
+  <div className="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+    <div className="relative p-6">
+      <div className="relative aspect-square mb-4 overflow-hidden rounded-xl bg-gray-50">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        {product.new && (
+          <span className="absolute top-4 left-4 bg-green-500 text-white text-xs font-medium px-3 py-1 rounded-full">
+            NEW
+          </span>
+        )}
+        <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+          <button className="p-2 bg-white rounded-full shadow-md hover:bg-gray-50 hover:text-red-500 transition-colors">
+            <Heart className="w-5 h-5" />
+          </button>
+          <button className="p-2 bg-white rounded-full shadow-md hover:bg-gray-50 hover:text-blue-500 transition-colors">
+            <Eye className="w-5 h-5" />
+          </button>
         </div>
-      )}
+      </div>
+
+      <div className="space-y-3">
+        <h3 className="font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
+          {product.name}
+        </h3>
+        <div className="flex items-center justify-between">
+          <span className="text-red-500 font-bold text-lg">${product.price}</span>
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star 
+                key={i} 
+                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+              />
+            ))}
+            <span className="text-gray-400 text-sm ml-1">({product.reviews})</span>
+          </div>
+        </div>
+        {product.colors && (
+          <div className="flex gap-2 pt-2">
+            {product.colors.map((color, i) => (
+              <button
+                key={i}
+                className={`w-6 h-6 rounded-full border-2 border-white ring-2 ring-${color}-500 bg-${color}-500 transition-transform hover:scale-110`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   </div>
 );
@@ -73,30 +81,30 @@ const ProductGrid = () => {
   ];
 
   return (
-    <div className="mx-auto p-8 ml-24">
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <div className="text-red-500 text-sm mb-1">Our Products</div>
-          <h2 className="text-xl font-bold">Explore Our Products</h2>
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-12">
+        <div className="space-y-2">
+          <p className="text-red-500 font-medium">Our Products</p>
+          <h2 className="text-3xl font-bold text-gray-900">Explore Our Products</h2>
         </div>
-        <div className="flex gap-2">
-          <button className="p-2 rounded hover:bg-gray-100">
-            <ChevronLeft size={20} />
+        <div className="flex gap-3">
+          <button className="p-3 rounded-full hover:bg-gray-100 border border-gray-200 transition-colors group">
+            <ChevronLeft size={20} className="text-gray-600 group-hover:text-gray-900" />
           </button>
-          <button className="p-2 rounded hover:bg-gray-100">
-            <ChevronRight size={20} />
+          <button className="p-3 rounded-full hover:bg-gray-100 border border-gray-200 transition-colors group">
+            <ChevronRight size={20} className="text-gray-600 group-hover:text-gray-900" />
           </button>
         </div>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {products.map((product, index) => (
           <ProductCard key={index} product={product} />
         ))}
       </div>
 
-      <div className="flex justify-center">
-        <button className="px-6 py-2 bg-red-500 text-white rounded">
+      <div className="text-center">
+        <button className="px-12 py-4 bg-red-500 text-white rounded-xl font-medium hover:bg-red-600 transition-colors duration-300 shadow-sm hover:shadow-md">
           View All Products
         </button>
       </div>
