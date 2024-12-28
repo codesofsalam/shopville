@@ -128,7 +128,7 @@ const Contact = () => {
 
           <div>
             <div className="bg-white p-8 rounded-xl shadow-sm h-full">
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <h2 className="text-1xl font-bold mb-6 flex items-center gap-2">
                 <MessageSquare className="w-6 h-6 text-red-500" />
                 Frequently Asked Questions
               </h2>
