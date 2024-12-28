@@ -18,7 +18,6 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="py-6 px-4 md:px-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <div className="flex-shrink-0">
               <Link
                 to="/"
@@ -28,12 +27,13 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center justify-center flex-grow space-x-8">
               <Link
                 to="/"
                 className={`text-gray-800 font-medium py-2 border-b-2 transition-colors ${
-                  isActive("/") ? "border-blue-600" : "border-transparent hover:border-blue-600"
+                  isActive("/")
+                    ? "border-blue-600"
+                    : "border-transparent hover:border-blue-600"
                 }`}
               >
                 Home
@@ -41,7 +41,9 @@ const Navbar = () => {
               <Link
                 to="/about"
                 className={`text-gray-600 font-medium py-2 border-b-2 transition-colors ${
-                  isActive("/about") ? "border-blue-600" : "border-transparent hover:border-blue-600"
+                  isActive("/about")
+                    ? "border-blue-600"
+                    : "border-transparent hover:border-blue-600"
                 }`}
               >
                 About
@@ -49,7 +51,9 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 className={`text-gray-600 font-medium py-2 border-b-2 transition-colors ${
-                  isActive("/contact") ? "border-blue-600" : "border-transparent hover:border-blue-600"
+                  isActive("/contact")
+                    ? "border-blue-600"
+                    : "border-transparent hover:border-blue-600"
                 }`}
               >
                 Contact
@@ -57,14 +61,15 @@ const Navbar = () => {
               <Link
                 to="/signup"
                 className={`text-gray-600 font-medium py-2 border-b-2 transition-colors ${
-                  isActive("/signup") ? "border-blue-600" : "border-transparent hover:border-blue-600"
+                  isActive("/signup")
+                    ? "border-blue-600"
+                    : "border-transparent hover:border-blue-600"
                 }`}
               >
                 Sign Up
               </Link>
             </div>
 
-            {/* Search Bar and Icons */}
             <div className="hidden md:flex items-center space-x-6">
               <div className="relative">
                 <input
@@ -93,7 +98,6 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
               onClick={ToggleMenuBtn}
@@ -102,7 +106,6 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Navigation */}
           <div
             className={`md:hidden mt-4 transition-all duration-300 ease-in-out ${
               isMobMenuOpen ? "opacity-100" : "opacity-0 hidden"
@@ -112,7 +115,9 @@ const Navbar = () => {
               <Link
                 to="/"
                 className={`block px-4 py-2 rounded-lg font-medium transition-colors ${
-                  isActive("/") ? "bg-gray-100 text-blue-600" : "text-gray-800 hover:bg-gray-50"
+                  isActive("/")
+                    ? "bg-gray-100 text-blue-600"
+                    : "text-gray-800 hover:bg-gray-50"
                 }`}
               >
                 Home
@@ -120,7 +125,9 @@ const Navbar = () => {
               <Link
                 to="/about"
                 className={`block px-4 py-2 rounded-lg font-medium transition-colors ${
-                  isActive("/about") ? "bg-gray-100 text-blue-600" : "text-gray-600 hover:bg-gray-50"
+                  isActive("/about")
+                    ? "bg-gray-100 text-blue-600"
+                    : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
                 About
@@ -128,7 +135,9 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 className={`block px-4 py-2 rounded-lg font-medium transition-colors ${
-                  isActive("/contact") ? "bg-gray-100 text-blue-600" : "text-gray-600 hover:bg-gray-50"
+                  isActive("/contact")
+                    ? "bg-gray-100 text-blue-600"
+                    : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
                 Contact
@@ -136,7 +145,9 @@ const Navbar = () => {
               <Link
                 to="/signup"
                 className={`block px-4 py-2 rounded-lg font-medium transition-colors ${
-                  isActive("/signup") ? "bg-gray-100 text-blue-600" : "text-gray-600 hover:bg-gray-50"
+                  isActive("/signup")
+                    ? "bg-gray-100 text-blue-600"
+                    : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
                 Sign Up

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
+import PropTypes from "prop-types";
+import { Mail, Phone, MapPin, Clock, MessageSquare, Send } from "lucide-react";
 
 const ContactCard = ({ icon: Icon, title, details }) => (
   <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all text-center">
@@ -12,9 +12,9 @@ const ContactCard = ({ icon: Icon, title, details }) => (
 );
 
 ContactCard.propTypes = {
-  icon: PropTypes.elementType.isRequired, // Ensure it's a valid React component
-  title: PropTypes.string.isRequired,    // Title should be a string
-  details: PropTypes.string.isRequired,  // Details should be a string
+  icon: PropTypes.elementType.isRequired,
+  title: PropTypes.string.isRequired,
+  details: PropTypes.string.isRequired,
 };
 
 const Contact = () => {
@@ -22,51 +22,53 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "support@shopville.com\nsales@shopville.com"
+      details: "support@shopville.com\nsales@shopville.com",
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+923300000000"
+      details: "+923300000000",
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "Karachi"
+      details: "Karachi",
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM"
-    }
+      details: "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM",
+    },
   ];
 
   const faqItems = [
     {
       question: "What is your return policy?",
-      answer: "We offer a 30-day return policy for all unused items in original packaging."
+      answer:
+        "We offer a 30-day return policy for all unused items in original packaging.",
     },
     {
       question: "How can I track my order?",
-      answer: "You can track your order using the tracking number provided in your shipping confirmation email."
+      answer:
+        "You can track your order using the tracking number provided in your shipping confirmation email.",
     },
     {
       question: "Do you ship internationally?",
-      answer: "Yes, we ship to most countries worldwide. Shipping costs vary by location."
-    }
+      answer:
+        "Yes, we ship to most countries worldwide. Shipping costs vary by location.",
+    },
   ];
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section */}
-      <div className="relative h-72 bg-black">
+      <div className="relative h-72">
         <img
-          src="/api/placeholder/1920/400"
+          src="/contact.jpg"
           alt="Contact Us"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
+          <div className="text-center text-black">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg max-w-2xl mx-auto px-4">
               We&apos;re here to help and answer any questions you might have
@@ -76,19 +78,18 @@ const Contact = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-16">
-        {/* Contact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {contactInfo.map((info, index) => (
             <ContactCard key={index} {...info} />
           ))}
         </div>
 
-        {/* Contact Form Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
             <p className="text-gray-600 mb-8">
-              Have a question or feedback? Fill out the form below and we&apos;ll get back to you as soon as possible.
+              Have a question or feedback? Fill out the form below and
+              we&apos;ll get back to you as soon as possible.
             </p>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -133,7 +134,10 @@ const Contact = () => {
               </h2>
               <div className="space-y-6">
                 {faqItems.map((item, index) => (
-                  <div key={index} className="border-b border-gray-100 pb-6 last:border-0">
+                  <div
+                    key={index}
+                    className="border-b border-gray-100 pb-6 last:border-0"
+                  >
                     <h3 className="font-semibold mb-2">{item.question}</h3>
                     <p className="text-gray-600 text-sm">{item.answer}</p>
                   </div>
