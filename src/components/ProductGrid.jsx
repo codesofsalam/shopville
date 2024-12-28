@@ -85,7 +85,7 @@ const ProductGrid = () => {
       price: 360,
       reviews: 95,
       addToCart: true,
-      image: "/dslr.png",
+      image: "/dslr.jpg",
     },
     {
       name: "ASUS FHD Gaming Laptop",
@@ -127,7 +127,7 @@ const ProductGrid = () => {
       price: 660,
       reviews: 55,
       colors: ["green", "red"],
-      image: "/satinjacket.png",
+      image: "/satinjacket.jpg",
     },
   ];
 

@@ -20,7 +20,7 @@ const products = [
   },
   {
     id: 2,
-    name: "AK-900 Wired Keyboard",
+    name: "Wireless Keyboard",
     price: 960,
     originalPrice: 1160,
     discount: 35,
@@ -50,13 +50,13 @@ const products = [
   },
   {
     id: 5,
-    name: "S-Series Comfort Chair",
-    price: 375,
-    originalPrice: 400,
+    name: "iPhone 16",
+    price: 799,
+    originalPrice: 900,
     discount: 25,
     rating: 4.7,
     reviews: 99,
-    image: "/chair.png",
+    image: "/iphone16.png",
   },
 ];
 
