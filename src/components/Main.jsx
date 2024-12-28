@@ -5,7 +5,7 @@ import { Heart, Eye } from "lucide-react";
 import PropTypes from "prop-types";
 import "swiper/css";
 import "swiper/css/navigation";
-import "./main.css";
+import "./Main.css";
 
 const products = [
   {
