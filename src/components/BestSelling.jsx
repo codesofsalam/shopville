@@ -73,7 +73,7 @@ const BestSelling = () => {
       imageUrl: "/cpucooler.png",
     },
     {
-      name: "Small BookSelf",
+      name: "BookSelf",
       salePrice: 360,
       originalPrice: 0,
       reviews: 65,
