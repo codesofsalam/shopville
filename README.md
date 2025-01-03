@@ -1,6 +1,3 @@
-It seems that I cannot directly update the file. You can copy the following updated content and paste it into your README.md file on GitHub:
-
-```markdown
 # Shopville
 
 Shopville is an eCommerce platform offering a seamless shopping experience. Developed using React, Vite, Tailwind CSS, and Framer Motion, Shopville provides an intuitive and smooth product e-Commerce browsing experience with robust features.
