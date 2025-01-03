@@ -14,7 +14,8 @@ ShopVille is an eCommerce platform offering a seamless shopping experience. Deve
 
 ### Prerequisites
 
-- Node.js and npm installed on your machine.
+- Node.js
+- npm
 
 ### Installation
 
