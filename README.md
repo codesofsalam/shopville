@@ -1,6 +1,6 @@
-# Shopville
+# ShopVille
 
-Shopville is an eCommerce platform offering a seamless shopping experience. Developed using React, Vite, Tailwind CSS, and Framer Motion, Shopville provides an intuitive and smooth product e-Commerce browsing experience with robust features.
+ShopVille is an eCommerce platform offering a seamless shopping experience. Developed using React, Vite, Tailwind CSS, and Framer Motion, Shopville provides an intuitive and smooth product e-Commerce browsing experience with robust features.
 
 
 ## Technologies Used
